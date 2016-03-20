@@ -53,6 +53,8 @@ var renderPage = function (page, element) {
   removeAllChildElements(element);
   for(var i = 0; i < page.length; i++) {
     var player = page[i];
+    var losses = player.attributes.num_games - player.attributes.won_games;
+    var percentage = player.attributes.won_games/player.attributes.num_games;
     var tr = document.createElement("tr")
     tr.setAttribute("id", "tr" + i);
     element.appendChild(tr);
@@ -65,6 +67,15 @@ var renderPage = function (page, element) {
     var rating = document.createElement("td")
     tr.appendChild(rating);
     rating.innerHTML = player.attributes.rating;
+    var games = document.createElement("td")
+    tr.appendChild(games);
+    games.innerHTML = player.attributes.won_games;
+    var games = document.createElement("td")
+    tr.appendChild(games);
+    games.innerHTML = losses;
+    var games = document.createElement("td")
+    tr.appendChild(games);
+    games.innerHTML = percentage * 100;
     var games = document.createElement("td")
     tr.appendChild(games);
     games.innerHTML = player.attributes.num_games;
