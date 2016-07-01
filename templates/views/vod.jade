@@ -1,0 +1,25 @@
+extends ../layouts/default
+
+block css
+	link(href="/styles/css/vod.min.css", rel="stylesheet")
+
+// CONTENT
+
+block intro
+	.container
+		h1.text-center Video on Demand
+		h4.text-center Find some of the greatest replays and videos of Supreme Commander!
+		hr
+
+block content
+	.container
+		<div class="button-group filter-button-group">
+		<button data-filter="*">show all</button>
+		<button data-filter=".gyle">Gyle</button>
+		</div>
+
+	#video.container
+
+block js
+	script(src='https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js')
+	script(src='/js/app/vod.js')

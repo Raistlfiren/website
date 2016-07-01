@@ -1,0 +1,29 @@
+/* VOD */
+
+/* ---- isotope ---- */
+
+#video {
+  border: 1px solid #333;
+}
+
+/* clear fix */
+#video:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  position: relative;
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  color: #262524;
+}
+
+.grid-item > * {
+  margin: 0;
+  padding: 0;
+}

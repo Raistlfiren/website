@@ -42,6 +42,7 @@ exports = module.exports = function(app) {
 	app.get('/competitive/tournaments', routes.views.tournaments);
 	app.get('/competitive/leaderboards', routes.views.leaderboards);
 	app.all('/contact', routes.views.contact);
+	app.get('/vod', routes.views.vod);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
